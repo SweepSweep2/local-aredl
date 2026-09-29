@@ -1,0 +1,256 @@
+h1 {
+    font-family: "Poppins";
+    color: white;
+    font-size: clamp(1.5em, 4vw + 1rem , 3.5rem);
+    text-align: center;
+    margin: 0px;
+}
+
+h2 {
+    font-family: "Poppins";
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    margin: 0px;
+}
+
+
+p {
+    color: white;
+    font-family: "Poppins";
+}
+
+h3 {
+    font-family: "Poppins";
+    color: white;
+    font-size: clamp(0.5em, 5em , 2em);
+    text-align: center;
+    margin: 0px;
+}
+
+.profile-setup {
+    background-color: rgb(20, 20, 20);
+    border-radius: 45px;
+    padding: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.aredl-api-key-tutorial {
+    background-color: rgb(20, 20, 20);
+    border-radius: 45px;
+    padding: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.control-panel {
+    background-color: rgb(20, 20, 20);
+    border-radius: 45px;
+    padding: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.side-by-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    font-family: "Poppins";
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #ff9900;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.265);
+    text-align: center;
+    font-size: 0.5em;
+}
+
+.profile-setup input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-setup input[type="text"] {
+    flex: 1;
+    min-width: 150px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    font-family: "Poppins";
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #ff9900;
+    font-weight: bold;
+    font-size: 2em;
+    color: black;
+}
+
+button:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.profile-summary {
+    background-color: rgb(20, 20, 20);
+    border-radius: 45px;
+    padding: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.level-section {
+    background-color: rgb(20, 20, 20);
+    border-radius: 45px;
+    padding: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.add-a-level-section {
+    display: flex;
+    background-color: rgb(20, 20, 20);
+    border-radius: 45px;
+    padding: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-name {
+    margin-right: 50px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 35%;
+    height: 35%;
+    max-height: 300px;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+}
+
+.level-dropdown {
+    position: relative;
+    width: 75%;
+    user-select: none;
+    font-family: "Poppins";
+    left: 12.5%;
+}
+
+.level-dropdown .header {
+    display: flex;
+    align-items: center;
+    background-color: #ff9900;
+    border: 1px solid #b2daff;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.level-dropdown .header input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    text-align: left;
+}
+
+.level-dropdown .header input::placeholder {
+    text-align: left;
+    font-size: 1em;
+}
+
+.level-dropdown .options {
+    display: none;
+    position: absolute;
+    top: 105%;
+    left: 0;
+    right: 0;
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    z-index: 10;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.level_list_item {
+    font-size: clamp(0.5em, 4vw + 1rem , 3.5rem);
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.level_object {
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    padding: 12px;
+    cursor: pointer;
+    position: relative;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    margin-bottom: 2px;
+    box-sizing: border-box;
+    font-size: 30px;
+    border-radius: 32px;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--bg-img);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: filter 0.15s ease;
+}
+
+.level-dropdown .option {
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    padding: 12px;
+    cursor: pointer;
+    position: relative;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    margin-bottom: 2px;
+    box-sizing: border-box;
+    font-size: 30px;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--bg-img);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: filter 0.15s ease;
+}
+
+.level-dropdown .option:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), var(--bg-img);
+}
+
+.level-dropdown.active .options {
+    display: block;
+}
+
+.containss-upload-profile-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

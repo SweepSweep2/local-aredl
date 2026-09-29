@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(25, 25, 25);
+    margin: 15px;
+}
+
+.topnav {
+    background-color: #212121;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 3px;
+    margin-bottom: 15px;
+}
+
+.topnav a {
+    font-family: "Poppins";
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;/
+}
+
+.topnav a:hover {
+    background-color: #a45a00;
+    color: rgb(255, 255, 255);
+}
+
+.topnav a.half-active {
+    background-color: #4e2f00;
+    color: white;
+}
+
+.topnav a.active {
+    background-color: #ff9900;
+    color: white;
+}
+
+.site-footer {
+    background: black;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: -15px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+#footer-content {
+    background: black;
+    text-align: center;
+}
+
+a {
+    color: #ff9900
+}
+
+.bottom-a {
+    color: white;
+}
+
+.fancy-text {
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", Monaco, monospace;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(120, 120, 255, 1), 0px 0px 10px rgba(120, 120, 255, 1);
+    margin: 0px;
+}

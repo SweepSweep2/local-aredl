@@ -1,0 +1,77 @@
+h1 {
+    font-family: "Poppins";
+    color: white;
+    font-size: 5em;
+    text-align: center;
+    margin: 0px;
+}
+
+h2 {
+    font-family: "Poppins";
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    margin: 0px;
+}
+
+h6 {
+    font-family: "Poppins";
+    color: white;
+}
+
+p {
+    color: white;
+    font-family: "Poppins";
+}
+
+.top-section {
+    background-color: rgb(20, 20, 20);
+    border-radius: 45px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.next-section {
+    background-color: rgb(20, 20, 20);
+    border-radius: 45px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.left-side {
+    background-color: rgb(20, 20, 20);
+    border-radius: 45px;
+    padding: 30px;
+    margin-right: 15px;
+    width: 50%;
+}
+
+.right-side {
+    background-color: rgb(20, 20, 20);
+    border-radius: 45px;
+    padding: 30px;
+    margin-left: 15px;
+    width: 50%;
+}
+
+.final-section {
+    background-color: rgb(20, 20, 20);
+    border-radius: 45px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+button {
+    font-family: "Poppins";
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #ff9900;
+    font-weight: bold;
+    font-size: 2em;
+    color: black;
+}
+
+button:hover {
+    color: white;
+    cursor: pointer;
+}

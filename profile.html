@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <meta name="description" content="A 'local' version of the AREDL where you control which levels you have records on">
+    <meta name="author" content="Sweep">
+
+    <meta property="og:title" content="Local AREDL">
+    <meta property="og:description" content="A 'local' version of the AREDL where you control which levels you have records on">
+    <meta property="og:url" content="https://sweepsweep2.github.io/local-aredl/">
+    <meta property="og:type" content="website">
+
+    <title>Profile Viewer | Local AREDL</title>
+    <script type="module" src="js/profile.js"></script>
+</head>
+<body>
+    <script>0; // apparently this fixes FOUC on firefox, works for me</script>
+    <div class="topnav">
+        <a class="" href="https://sweepsweep2.github.io/local-aredl/"><b>LOCAL AREDL</b></a>
+        <a class="active" href="https://sweepsweep2.github.io/local-aredl/profile">PROFILE</a>
+    </div>
+
+    <h1 id="loading">Loading...</h1>
+
+    <div style="display: none;" id="profile-setup" class="profile-setup">
+        <h1>Create a Profile</h1>
+
+        <h3>--------</h3>
+
+        <div id="contains-profile-name">
+            <h3>Profile Name</h3>
+            <input placeholder="You can change this later!" id="profile-name">
+        </div>
+
+        </br>
+        </br>
+
+        <div class="contains-upload-profile-picture" id="contains-upload-profile-picture">
+            <h3>Profile Picture </h3>
+
+            <!-- Hidden html element :O -->
+            <input style="display: none" type="file" id="profile-picture-input" accept="image/*">
+            <div class="containss-upload-profile-picture">
+                <button id="upload-profile-picture">Click to upload! (max 2mb)</button>
+            </div>
+            
+        </div>
+
+        </br>
+        <h3>--------</h3>
+        <h3>Import from AREDL (optional)</h3>
+        </br>
+
+        <div id="contains-aredl-api-key-input">
+            <h3>AREDL API Key</h3>
+
+            <input placeholder="Enter your AREDL API key here" id="aredl-api-key">
+        </div>
+
+        </br>
+        <h3>--------</h3>
+        </br>
+
+        <div class="side-by-side" id="contains-create-profile-button">
+            <button id="create-profile-button">Create Profile</button>
+        </div>
+
+        <p id="invalid-credentials" style="text-align: center; color: red; display: none;">The API key given is invalid.</p>
+        <p id="generic-error" style="text-align: center; color: red; display: none;">Something went wrong! Check if AREDL is online and your internet connection is stable, then try again.
+            If the error still persists, please contact me on Discord: @sweepsweep2
+        </p>
+    </div>
+
+    <div style="display: none;" id="aredl-api-key-tutorial" class="aredl-api-key-tutorial">
+        <h2>How to Get Your AREDL API Key</h2>
+
+        <p>Go to <a href="https://aredl.net">AREDL</a>, and log in to your account. Then, click your account profile picture at the top right, and click Settings.
+        Then, scroll down to the bottom, where the Developer Setting section rests. Inside the API Key lifetime text box, enter in 300. (this will make the API key last 5 minutes)
+        Then, click Create and copy API Key to clipboard, and then input your API key into the input box.</p>
+
+        <p>If you are worried that this website will steal your API key, you can either look at the source code (CTRL + U or <a href="https://github.com/SweepSweep2/sweepsweep2.github.io/local-aredl/profile.js">GitHub</a>).
+        There will be comments guiding you through what the website does with your API key, and proof that it only goes to AREDL.</p>
+    </div>
+
+    <div style="display: none;" id="profile-summary" class="profile-summary side-by-side">
+        <h1 id="profile-name" class="profile-name">User - 0 points</h1>
+        <img id="profile-picture" class="profile-picture" src="" alt="Profile Picture">
+    </div>
+
+    <div style="display: none;" id="add-a-level-section" class="add-a-level-section">
+        <h3>Add a level</h3>
+
+        <div class="level-dropdown" id="level-dropdown">
+            <div class="header">
+                <input type="text" placeholder="Search" id="search" class="search">
+            </div>
+
+            <div class="options" id="options">
+            </div>
+        </div>
+    </div>
+
+    <div style="display: none;" id="level-section" class="level-section">
+        <h3>List of levels you've beaten:</h3>
+        
+        <div id="level_list_container" class="level_list_container"></div>
+    </div>
+
+    <div style="display: none;" id="control-panel" class="control-panel">
+        <h2>Control Panel</h2>
+
+        <input style="width: 50%" id="username-change" placeholder="New username"><button id="username-change-button">Change Username</button>
+        <h3>Change Profile Picture</h3>
+        <input style="display: none" type="file" id="profile-picture-input2" accept="image/*"><button id="upload-profile-picture2">Click to upload! (max 2mb)</button>
+    </div>
+
+    <footer class="site-footer">
+        <div id="footer-content" class="footer-content">
+            <p><i>Local AREDL is not affiliated with AREDL or RobTop Games AB.</i></p>
+
+            <p class="fancy-text"><a class="bottom-a" href="https://sweepsweep2.github.io">developed by sweep</a></p>
+        </div>
+    </footer>
+</body>
+</html>
